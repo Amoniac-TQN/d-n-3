@@ -339,4 +339,58 @@ a {
     font-size: 1.3rem;
     font-weight: 400;
     line-height: 1.75;
+} 
+
+/* ================= code cho phần about======================= */
+.about{
+    margin-top:85px;
+    padding: 85px 0 206px;
+}
+
+.about-row{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.about__media{
+    width: 55%
+}
+
+.about-content{
+    width: 45%;
+}
+
+
+.about__img{
+    position: relative;
+}
+
+.about__img--big{
+    display: flex;
+    object-fit: cover;
+    width: 412px;
+    height: 370px;
+    border: 3px solid #2E80CE;
+    border-radius: 6px;
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.07);
+}
+
+.about__img--small{
+    object-fit: cover;
+    position: absolute;
+    top: 170px;
+    left: 240px;
+    width: 332px;
+    height: 370px;
+    border: 2px solid #2E80CE;
+    border-radius: 6px;
+}
+
+.about-content__btn{
+    margin-top: 38px;
+}
+
+.about .section-desc{
+    margin-top: 15px;
 }
