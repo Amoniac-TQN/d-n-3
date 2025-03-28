@@ -14,7 +14,12 @@ body {
   font-family: "sora", sans-serif;
 }
 
-/*  ------------------ phần common---------------------- */
+ /* ------------------ phần common---------------------- */
+/* chúng ta cần code thêm phần tính kế thừa cho các thẻ đặc biệt để nó ăn theo font của nó */
+input,textarea,select,button{
+  font-family: inherit;
+  font-size: inherit;
+}
 .container {
   width: 1270px;
   max-width: calc(100% - 58px);
@@ -636,4 +641,172 @@ a {
 
 .blog-item__more:hover{
   color: #2e80ce;
+}
+
+/* -------------------- code cho phần appointment---------------- */
+.appointment{
+  margin: 85px 0;
+}
+
+.appointment__inner{
+  padding: 100px 178px;
+  background: #f6f8ff;
+  text-align: center;
+}
+
+.appointment__heading{
+  width: 913px;
+  color: #10375C;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.appointment__heading::after{
+  content: "";
+  display: block;
+  width: 136px;
+  height: 2px;
+  background: #2e80ce;
+  margin:18px auto 0px;
+}
+
+.appointment__desc{
+  margin-top: 18px auto 0;
+  max-width: 917px;
+}
+
+.appointment__btn{
+  margin-top: 38px;
+}
+
+/* ----------------- code cho phần footer---------------------- */
+.footer{
+  margin-top: 170px;
+  padding-top: 100px; 
+  background: #10375C;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer__top{
+  display: grid;
+  grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+  column-gap: 78px;
+}
+
+.footer__desc{
+  margin-top: 21px;
+  color: #A9B3BB;
+  font-size: 1.2rem;
+  line-height: 1.55;
+}
+
+.footer__heading{
+  color: #FFF;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.footer__list{
+  margin: 20px 0 28px;
+}
+
+.footer__link{
+  color: #A9B3BB;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.86;
+  /* sử dụng nowrap để các cột sau không bị lạc dòng*/
+  white-space:nowrap;
+}
+
+.footer__link:hover{
+  /* sử dụng text decoration underline để khi di chuyển chuột vào nó sẽ xuất hiện dòng gạch chân dưới đoạn văn */
+  text-decoration: underline;
+}
+
+.footer__item{
+  margin-bottom: 10px;
+}
+
+.footer__social{
+  margin: 20px 0 28px;
+  column-gap: 10px;
+  display: flex;
+}
+
+.footer__social-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  background: #fff;
+  color: #2e80ce;
+  transition: 0.25s;
+}
+
+.footer__social-btn:hover{
+  background: #2e80ce;
+  /* color là dùng cho font chữ */
+  color: #fff;
+}
+
+.footer-form{
+  display: flex;
+  column-gap: 12px;
+  margin-top: 10px;
+}
+
+.footer-form__input{
+  width: 212px;
+  height: 46px;
+  border-radius: 4px;
+  border: 1px solid #406181;
+  background: transparent;
+  /* sử dụng outline none để loại bỏ đi viền */
+  outline: none;
+  color: #fff;
+}
+
+/* để sử dụng style của placeholder chúng ta cần sử dụng một lớp giả như sau:  */
+.footer-form__input::placeholder{
+  color: #9CA8B1;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+.footer-form__submit{
+  width: 108px;
+  height: 46px;
+  border-radius: 4px;
+  background: #2E80CE;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.86;
+  border: none;
+}
+
+.footer-form__submit:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.footer__copyright{
+  /* content: ""; */
+  border-top: 1px solid #406181;
+}
+
+.footer__copyright-text{
+  padding: 28px 0 42px;
+  color: #AAB3BA;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.86;
 }
